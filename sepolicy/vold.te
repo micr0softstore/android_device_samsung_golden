@@ -1,1 +1,2 @@
-allow vold efs_file:dir r_file_perms;
+allow vold kernel:process setsched;
+allow vold sdcardd_exec:file { read open execute execute_no_trans };

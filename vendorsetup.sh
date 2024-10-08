@@ -1,3 +1,1 @@
-add_lunch_combo lineage_golden-eng
-add_lunch_combo lineage_golden-userdebug
-add_lunch_combo lineage_golden-user
+add_lunch_combo omni_golden-userdebug

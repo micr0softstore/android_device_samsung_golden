@@ -1,0 +1,9 @@
+allow {
+admsrv
+atd
+bootanim
+copsd
+init
+rild
+surfaceflinger
+} self:process execmem;

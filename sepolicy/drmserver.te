@@ -1,1 +1,1 @@
-allow drmserver sysfs:file r_file_perms;
+allow drmserver cpuctl_device:dir { search };

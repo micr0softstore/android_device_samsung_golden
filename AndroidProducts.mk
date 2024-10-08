@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2013 The Android Open Source Project
 # Copyright (C) 2013 Óliver García Albertos (oliverarafo@gmail.com)
+# Copyright (C) 2014 SlimRoms Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +16,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
-
-ifeq ($(TARGET_DEVICE),golden)
-    include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/omni_golden.mk

@@ -1,2 +1,2 @@
-allow zygote debugfs:file rw_file_perms;
-allow zygote fuse:dir mounton;
+# zygote
+allow zygote cpuctl_device:dir { search };

@@ -1,22 +1,13 @@
-# STE, AT daemon
+# AT daemon
 type atd, domain;
 type atd_exec, exec_type, file_type;
+
 init_daemon_domain(atd)
 
-allow atd { at_device stm_device }:chr_file rw_file_perms;
-allow atd self:capability { setuid dac_override };
-allow atd shell_data_file:dir rw_dir_perms;
-unix_socket_connect(atd, adm, admsrv)
-unix_socket_connect(atd, cn, cn_server)
-unix_socket_connect(atd, cops, copsd)
-unix_socket_connect(atd, simd, simd)
-unix_socket_connect(atd, sms_server, sms_server)
-unix_socket_send(atd, pscc, psccd)
-file_type_auto_trans(atd, socket_device, at_socket)
-file_type_auto_trans(atd, system_data_file, radio_data_file)
-type_transition atd shell_data_file:{ file sock_file } radio_data_file;
-allow atd atd_exec:file execmod;
-allow atd console_device:chr_file { ioctl open read write };
-allow atd self:netlink_socket { bind create read setopt write };
-allow atd sysfs:file { getattr open read };
-allow atd system_file:file execmod;
+allow atd self:capability { dac_override dac_read_search };
+allow atd self:netlink_socket { create };
+
+# never allow
+# allow atd device:chr_file { open read write };
+
+allow atd console_device:chr_file { open read write };

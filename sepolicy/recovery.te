@@ -1,0 +1,29 @@
+allow recovery kernel:system { module_request };
+
+
+
+allow recovery rootfs:dir { create_dir_perms };
+allow recovery mtp_device:chr_file { rw_file_perms };
+
+
+allow recovery efs_file:dir { r_dir_perms };
+
+
+allow recovery selinuxfs:file { w_file_perms };
+
+
+
+allow recovery rootfs:file { create_file_perms };
+allow recovery rootfs:fifo_file { create_file_perms };
+allow recovery rootfs:lnk_file { create_file_perms };
+allow recovery recovery:netlink_kobject_uevent_socket { create read bind };
+
+
+allow recovery default_prop:property_service { set };
+allow recovery system_radio_prop:property_service { set };
+
+
+
+
+
+
