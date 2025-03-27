@@ -87,6 +87,8 @@ on fs
     start adbd
     setprop sys.usb.state mtp,adb
 
+    setprop sys.usb.ffs.aio_compat 1
+
 on post-fs
     chown radio radio /modemfs
     chmod 0771 /modemfs
