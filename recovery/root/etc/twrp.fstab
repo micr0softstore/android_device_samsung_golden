@@ -6,7 +6,7 @@
 /vendor		ext4	/dev/block/bootdevice/by-name/vendor		flags=display="Vendor";backup=1;wipeingui
 /modemfs	ext4	/dev/block/bootdevice/by-name/modemfs   	flags=display="Modem";backup=1;wipeingui;flashimg=1
 /efs		ext4    /dev/block/bootdevice/by-name/efs    		flags=display="EFS";backup=1;wipeingui;flashimg=1
-/preload	ext4	/dev/block/bootdevice/by-name/preload  		flags=display="Preload";backup=1;wipeingui;flashimg=1
+/preload	emmc	/dev/block/bootdevice/by-name/preload  		flags=display="Preload";backup=1;wipeingui;flashimg=1
 
 
 # Cache
